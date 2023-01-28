@@ -1,0 +1,47 @@
+alias dc='cd ~/Documents'
+alias dw='cd ~/Downloads'
+
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+
+if command -v exa >/dev/null; then
+  alias ls='LC_COLLATE=C exa -Fgh --time-style=long-iso --icons --color=auto --color-scale --group-directories-first'
+  alias lsa='ls -lah'
+  alias l='ls -lah'
+  alias ll='ls -lh'
+  alias la='ls -lah'
+  alias lG='ls -G'
+  alias lT='ls -lT --level=9'
+else
+  alias ls='LC_COLLATE=C ls -F --color=auto --time-style=long-iso --group-directories=first'
+  alias lsa='ls -lah'
+  alias l='ls -lah'
+  alias ll='ls -lh'
+  alias la='ls -lAh'
+  alias lla='ls -la'
+fi
+
+alias pkgs='sudo pacman -Ss'
+alias pkgi='sudo pacman -S'
+alias pkgr='sudo pacman -Rs'
+alias pkgu='sudo pacman -Syu'
+alias pkgl='sudo pacman -Qq'
+
+# make sure we never run pacman -Sy
+# TODO: figure out how to block
+# pacman -Sy
+# pacman -Syuw
+alias 'pacman -Sy'='pacman -Syu'
+
+alias vim='nvim'
+alias vi='nvim'
+alias v='nvim'
+
+alias sz='source ~/.zshrc'
+alias ez='nvim ~/.zshrc'
+alias ea='nvim ~/.aliasrc'
+
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias pwgen="openssl rand -base64 256 | tr -d '\n' | head -c 25"
