@@ -1,5 +1,6 @@
 alias dc='cd ~/Documents'
-alias dw='cd ~/Downloads'
+alias dl='cd ~/Downloads'
+alias dw='cd ~/Workspace'
 
 alias rm='rm -iv'
 alias cp='cp -iv'
